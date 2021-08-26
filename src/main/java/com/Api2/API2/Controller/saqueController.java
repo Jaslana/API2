@@ -17,8 +17,8 @@ public class saqueController {
     @Autowired
     private ContaRepository repository;
     @PostMapping(path = "/{cpf}")
-    public String alterarQtdSaquesBanco(@PathVariable(value = "cpf") String cpf) {
-        Optional<ContaModel> busca = repository.findByUsuarioCpf(cpf);
+    public String alterarQtdSaquesBanco(@PathVariable(value = "nconta") String nconta) {
+        Optional<ContaModel> busca = repository.findBynconta(nconta);
         if (busca.isPresent()) {
             busca.map(map -> {
                 map.setQtdSaques(map.getQtdSaques() + 1);
