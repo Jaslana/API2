@@ -17,9 +17,11 @@ public class ContaModel {
     private UsuarioModel usuario;
 
     @Column(length = 50)
-    @NotNull @NotEmpty
+    @NotNull
+    @NotEmpty
     private String nconta;
-    @NotNull @NotEmpty
+    @NotNull
+    @NotEmpty
     @Column(length = 50)
     private String agencia;
     private Integer qtdSaques;
@@ -27,7 +29,7 @@ public class ContaModel {
     @NotNull
     private double saldo;
 
-    @Column (nullable = false)
+    @Column(nullable = false)
     private int dverif;
 
     @Column(length = 50)

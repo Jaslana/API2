@@ -23,6 +23,7 @@ public class OperacoesModel {
     @NotNull
     private TipoOperacaoEnum tipoOperacao;
     private LocalDateTime data = LocalDateTime.now();
+
     public OperacoesModel(Integer id, String cpf, double valor, TipoOperacaoEnum tipoOperacao, LocalDateTime data) {
         this.id = id;
         this.cpf = cpf;
@@ -30,29 +31,38 @@ public class OperacoesModel {
         this.tipoOperacao = tipoOperacao;
         this.data = data;
     }
+
     public OperacoesModel() {
     }
+
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
     }
+
     public String getCpf() {
         return cpf;
     }
+
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
     public double getValor() {
         return valor;
     }
+
     public void setValor(double valor) {
         this.valor = valor;
     }
+
     public TipoOperacaoEnum getTipoOperacao() {
         return tipoOperacao;
     }
+
     public void setTipoOperacao(TipoOperacaoEnum tipoOperacao) {
         this.tipoOperacao = tipoOperacao;
     }
