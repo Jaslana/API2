@@ -23,7 +23,7 @@ public class saqueController {
         Optional<ContaModel> busca = repository.findBynconta(nconta);
         if (busca.isPresent()) {
             busca.map(map -> {
-                map.setQtdSaques(map.getQtdSaques() + 1);
+                map.setQtdSaques(map.getQtdSaques() != null ? map.getQtdSaques() + 1 : 1);
                 ContaModel updated = repository.save(map);
                 return ResponseEntity.ok().body(updated);
             });
